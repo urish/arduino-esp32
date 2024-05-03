@@ -96,7 +96,7 @@ jobs:
       - name: Report result
         uses: actions/github-script@v7
         with:
-          ebug: true
+          debug: true
           script: |
             const owner = '${{ github.repository_owner }}';
             const repo = '${{ github.repository }}'.split('/')[1];
