@@ -100,7 +100,6 @@ jobs:
             const owner = '${{ github.repository_owner }}';
             const repo = '${{ github.repository }}'.split('/')[1];
             const sha = '${{ github.event.workflow_run.head_sha }}';
-            #create conclusion variable from previous job conclusion
             const conclusion = '${{ needs.wokwi-test.conclusion }}';
             core.debug(`owner: ${owner}`);
             core.debug(`repo: ${repo}`);
