@@ -77,7 +77,6 @@ jobs:
 
   wokwi-test:
     needs: [build, gen_chunks]
-    if: github.event_name == 'schedule'
     name: ${{matrix.chip}}-Wokwi_Test#${{matrix.chunks}}
     strategy:
       fail-fast: false
