@@ -58,6 +58,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }} # Check out the code of the PR to get correct pytest files
 
       - name: Download ${{matrix.chip}}-${{matrix.chunks}} artifacts
         uses: actions/download-artifact@v4
